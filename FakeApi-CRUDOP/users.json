@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "shiva sai",
+      "age": "12",
+      "branch": "ece"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 500px;
+            margin: 50px;
+        }
+        table,th,tr,td{
+            border: 2px solid grey;
+            text-align: center;
+            background-color: yellow;
+        }
+        tr,td{
+            background-color: cyan;
+        }
+        input{
+            margin: 20px;
+        }
+        button{
+            height:30px;
+            width:100px;
+            margin:10px;
+        }
+        #elements{
+            width: 500px;
+            background-color: aliceblue;
+        }
+    </style>
+    <script src="./app.js"></script>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+</head>
+<body onload="getList()">
+    <center>
+        <h1>CRUD OPERATIONS DEMONSTRATION</h1>
+        <div id="elements">
+            <label>ID</label>
+            <input type="text" id="id" placeholder="Enter ID"><br>
+            <label>NAME</label>
+            <input type="text" id="name"placeholder="Enter Name"><br>
+            <label>AGE</label>
+            <input type="text" id="age" placeholder="Enter Age"><br>
+            <label>BRANCH</label>
+            <input type="text" id="branch" placeholder="Enter Branch"><br><br>
+            <button id="fetch" onclick="getList()">Fetch</button>
+            <button id="btn" onclick="addData()">ENTER</button><br><br>
+        </div>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>BRANCH</th>
+                <th colspan="2">ACTION</th>
+            </thead>
+            <tbody id="listCrud"></tbody>
+        </table>
+    </center>
+</body>
+</html>
